@@ -7,7 +7,7 @@
  *
  * Return: Nothing.
  */
- 
+
 void push(stack_t **stack, unsigned int nline)
 {
 	stack_t *new;
@@ -41,7 +41,7 @@ void push(stack_t **stack, unsigned int nline)
  *
  * Return: Nothing.
  */
- 
+
 void pall(stack_t **stack, unsigned int nline)
 {
 	stack_t *temp;
@@ -61,7 +61,7 @@ void pall(stack_t **stack, unsigned int nline)
  *
  * Return: Nothing.
  */
- 
+
 void free_stack(stack_t **stack)
 {
 	stack_t *temp = NULL;
@@ -83,7 +83,7 @@ void free_stack(stack_t **stack)
  * @nline: the line number
  * Return: Nothing.
  */
- 
+
 void nop(stack_t **stack, unsigned int nline)
 {
 	(void)stack;
@@ -95,7 +95,7 @@ void nop(stack_t **stack, unsigned int nline)
  * @c: int
  * Return: 1 if yes, 0 if no
  */
- 
+
 int _isalpha(int c)
 {
 	if (((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')))
