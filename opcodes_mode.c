@@ -1,25 +1,35 @@
+
+
 #include "monty.h"
 
 /**
- * stack - adds data to top of stack
- * @stack: doubly linked list
- * @line_number: the line
+ * addst - changes mode of push to stack
+ * @stack: pointer to stack
+ * @nline: line number
+ *
+ * Return: Nothing.
  */
-void stack(stack_t **stack, unsigned int line_number)
+
+void addst(stack_t **stack, unsigned int nline)
 {
+	(void)nline;
 	(void)stack;
-	(void)line_number;
-	args.order = 1;
+
+	arg.flag = 0;
 }
 
 /**
- * queue - adds data to top of stack
- * @stack: doubly linked list
- * @line_number: the line
+ * addqu - changes mode of push to queue
+ * @stack: pointer to stack
+ * @nline: line number
+ *
+ * Return: Nothing.
  */
-void queue(stack_t **stack, unsigned int line_number)
+
+void addqu(stack_t **stack, unsigned int nline)
 {
+	(void)nline;
 	(void)stack;
-	(void)line_number;
-	args.order = 0;
+
+	arg.flag = 1;
 }
