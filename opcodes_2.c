@@ -112,34 +112,22 @@ void pchar(stack_t **stack, unsigned int nline)
 	}
 	printf("%c\n", c);
 }
+
 /**
- * pstr - prints a str from ascii starting from the top
- * @stack: pointer to the head node pointer of stack
- * @nline: the line number
- * Return: Nothing.
+ * pstr - prints string
+ * @stack: doubly linked list
+ * @line_number: the line
  */
 
-void pstr(stack_t **stack, unsigned int nline)
+void pstr(stack_t **stack, unsigned int line_number)
 {
-	int idx = 0;
-	char res[] = "";
-	char c;
-	stack_t *temp;
+	stack_t *temp = *stack;
 
-	temp = *stack;
-	(void)nline;
-	/* starts at the top */
-	while (temp)
+	(void)line_number;
+	while (temp && (temp->n > 0 && temp->n <= 127))
 	{
-		if (temp->n == 0)
-			break;
-		if (_isalpha(temp->n) == 0)
-			break;
-		c = temp->n;
-		printf("%c", c);
-		res[idx] += c;
+		printf("%c", temp->n);
 		temp = temp->next;
-		idx++;
 	}
 	printf("\n");
 }
